@@ -1,9 +1,10 @@
 /* 取消body的margin、padding的默认值 */
-.body{
+body{
     margin:0;
     padding:0;
 }
-.body{
+body{
+    height:2500px;
     font:14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
 /* 给topbar容器添加颜色、高度等属性包含需要容纳的文字； */
@@ -20,7 +21,7 @@
 }
 /* 给a标签添加text-decoration属性取消下划线； */
 a{
-    text-decoration: none;
+    text-decoration:none;
 }
 /* 给a标签添加点击效果、字体大小、字体颜色。 */
 .topbar a{
@@ -40,18 +41,53 @@ a{
 }
 /* 给nav，info中的文字定位； */
 .topbar-nav{
-    float: left;
+    float:left;
     height:40px;
     line-height:40px;
-    font-size: 0；
+    font-size:0;
 }
 .topbar-nav span{
     font-size:12px;
     color:#424242;
-    font-family: sans-serif;
+    font-family:sans-serif;
     margin:0.5em;
 }
-.topbar-info ,.topbar-cart{
+.topbar-info, .topbar-cart{
     float:right;
-    
+}
+.topbar-cart a {
+    display:block;/* 变成块级元素 */
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width:120px;
+    background-color: #424242;
+}
+.topbar-cart a:hover{
+    background-color: #fff;
+    color:#ff6700;
+}
+.topbar-cart span{
+    margin-left:-4px;
+    font-size:12px;
+}
+.topbar-info{
+    margin-right: 15px;
+}
+.topbar-info a{
+    float: left;
+    padding:0 5px;
+    line-height: 40px;
+    height: 40px;
+}
+.topbar-info span{
+    float: left;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #424242;
+    line-height: 40px;
+    height:40px;
+}
+.topbar-info .sep{
+    padding:0 10px;
 }
