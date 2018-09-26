@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* .header-nav{
+    height: 100px;
+    width: 800px;
+    margin: 5px;
+    background-color: #333333;
+    border: 1px solid black;
+    
+} */
+.logo{
+    width:60px;
+    height:60px;
+    float: left;
+    background:url(../img/chanke.png) no-repeat;
+}
+.logo h1{
+    text-indent:-9999px;
+    width:60px;
+    height:60px;
+    overflow:hidden;
+}
+
+.a a{
+    display: block;
+    float: left;
+    font-size: 16;
+    color: #fff;
+    text-decoration:none;
+}
+.a a:hover{
+    color: #b0b0b0;
+}
