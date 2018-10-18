@@ -2,14 +2,14 @@ body{
     margin: 0;
     padding: 0;
 }
-/* .header-nav{
+.header-nav{
     height: 100px;
-    width: 800px;
+    width: 99%;
     margin: 5px;
     background-color: #333333;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     
-} */
+}
 .logo{
     width:60px;
     height:60px;
@@ -32,4 +32,28 @@ body{
 }
 .a a:hover{
     color: #b0b0b0;
+}
+.main-nav{
+    height: 200px;
+    width: 40px;
+    /* display: block; */
+    /* float: left; */
+    margin:5px;
+    border:1px solid #b0b0b0;
+}
+.main-por{
+    position: relative;
+    height: 200px;
+    float: none;
+    /* margin-left:50px; */
+    /* display: block; */
+    margin:5px;
+    border:1px solid #b0b0b0;
+}
+.footer-txt{
+    height: 40px;
+    margin:5px;
+    text-align:center;
+    padding-top: 10px;
+    border:1px solid #b0b0b0;
 }
