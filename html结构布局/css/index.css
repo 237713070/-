@@ -2,6 +2,10 @@ body{
     margin: 0;
     padding: 0;
 }
+.header{
+    position: fixed;
+    left: 10px;
+}
 .header-nav{
     height: 100px;
     width: 800px;
@@ -34,16 +38,23 @@ body{
     color: #b0b0b0;
 }
 .main-nav{
-    height: 200px;
-    width: 40px;
+    position: fixed;
+    left: 10px;
+    height: 400px;
+    width: 80px;
     display: block;
     float:left;
     border: 1px solid black;
 }
 .main-pot{
-    height: 200px;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 400px;
     width: 100%;
-    display: block;
-    float: right;
+    margin-left: 80px;
     border: 1px solid black;
 }
+/* .footer-bean{
+    
+} */
