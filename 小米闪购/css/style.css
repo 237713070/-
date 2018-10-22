@@ -1,11 +1,15 @@
-/* 取消body的margin、padding的默认值 */
-body{
+/* 取消body,ul,li的margin、padding的默认值 */
+body ,ul ,li{
     margin:0;
     padding:0;
 }
 body{
     height:2500px;
     font:14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+/* 取消ul的小圆点 */
+ul{
+    list-style-type: none;
 }
 /* 给topbar容器添加颜色、高度等属性包含需要容纳的文字； */
 .topbar{
@@ -101,12 +105,19 @@ a{
     width: 62px;
     height: 55px;
     margin-top: 22px;
-    border:1px solid black;
+    /* border:1px solid black; */
 }
 .header-logo a{
+    display: block;
     width: 55px;
     height: 55px;
+    background: #ff6700 url(../img/logo.png) no-repeat 50% 50%;
 }
+.header-logo .lr{
+    text-align: left;
+    text-indent: -99999em;
+}
+/* header-nav */
 .header-nav{
     float: left;
     width:820px;
