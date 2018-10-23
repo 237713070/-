@@ -32,25 +32,26 @@ a{
     color:#b0b0b0;
     font-size:12px;
 }
-.topbar a:hover{
+.topbar a:hover {
     color:#fff;
 }
 /* 添加伪元素清理浮动，消除塌陷来解决浮动带来的边界塌陷； */
-.container::before , .container::after {
+.container::before , .container::after 
+.clearfix::before, .clearfix::after {
     content:"";
     display:table;
 }
-.container::after{
+.container::after .clearfix::after {
     clear:both;
 }
 /* 给nav，info中的文字定位； */
-.topbar-nav{
+.topbar-nav {
     float:left;
     height:40px;
     line-height:40px;
     font-size:0;
 }
-.topbar-nav span{
+.topbar-nav span {
     font-size:12px;
     color:#424242;
     font-family:sans-serif;
@@ -59,6 +60,10 @@ a{
 .topbar-info, .topbar-cart{
     float:right;
 }
+/* .topbar-cart i{
+    font-size: 20px;
+    line-height: 20px;
+} */
 .topbar-cart a {
     display:block;/* 变成块级元素 */
     height: 40px;
@@ -122,12 +127,75 @@ a{
     float: left;
     width:820px;
     height: 100px;
-    border:1px solid black;
+    /* border:1px solid black; */
+}
+.header-nav .nav-list{
+    width: 820px;
+    height: 88px;
+    font-size: 16px;
+    padding: 12px 0 0 30px;
+}
+.header-nav .nav-list .nav-category{
+    float: left;
+    width: 127px;
+    padding: 0 15px 0 0;
+}
+.header-nav .nav-list .nav-category a{
+    display: block;
+    padding: 26px 0 38px;
+    text-align: right;
+    color: #333;
+}
+.header-nav .nav-list .nav-item{
+    float: left;
+}
+.header-nav .nav-list .nav-item a{
+    display: block;
+    padding: 26px 10px 38px;
+    color: #333;
+}
+.header-nav .nav-list .nav-item a:hover{
+    color: #ff6700;
 }
 .header-search{
     float: right;
     width: 296px;
     height: 50px;
     margin-top:25px;
-    border:1px solid black;
+    /* border:1px solid black; */
+}
+.header-search .search-form {
+    position: relative;
+    display: block;
+    width: 296px;
+    height: 50px;
+}
+.header-search .search-form .search-text{
+    position: absolute;
+    top: 0;
+    right: 51px;
+    display: block;
+    width: 245px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #e0e0e0;
+    outline: 0; /*取消input自带的边框颜色*/
+}
+.header-search .search-form .search-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 52px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    font-size: 24px;
+    line-height: 24px;
+    background: #fff;
+    color: #616161;
+    outline: 0;
+}
+.header-search .search-form .search-btn:hover{
+    background-color: #ff6700;
+    color: #fff;
 }
