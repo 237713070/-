@@ -1,34 +1,27 @@
-body{
+body ,ul ,li ,p{
     margin: 0;
     padding: 0; 
 }
-
-.header-top{
-    width: 1226px;
-    height: 50px;
-    margin: 5px;
-    text-align: center;
-    padding-top: 25px;
-    border: 1px solid #b0b0b0
+.header {
+    height: 60px;
 }
-main{
-    height: 450px;
-    width: 1226px;
-    margin: 5px;
-    border: 1px solid #000000
-}
-.nav-wanz{
-    height: 420px;
-    width: 120px;
+.header-text {
     display: block;
-    background: #333333;
-    border: 1px solid #000000;
+    height: 60px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    background-color: #b0b0b0;
 }
-.nav-wanz a{
-    /* color: #f0f0f0 */
-    /* font-size:16px; */
-    text-decoration: none;
+.nav {
+    height: 420px;
+    width: 100%;
+    border: 1px solid black;
 }
-a:hover{
-    color:#b0b0b0
+.nav .nav-wanz li {
+    display: block;
+    height: 220px;
+    width: 100px
+    line-style: none;
 }
