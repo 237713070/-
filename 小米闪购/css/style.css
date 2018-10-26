@@ -36,12 +36,12 @@ a{
     color:#fff;
 }
 /* 添加伪元素清理浮动，消除塌陷来解决浮动带来的边界塌陷； */
-.container::before , .container::after 
+.container::before , .container::after ,
 .clearfix::before, .clearfix::after {
     content:"";
     display:table;
 }
-.container::after .clearfix::after {
+.container::after ,.clearfix::after {
     clear:both;
 }
 /* 给nav，info中的文字定位； */
@@ -211,7 +211,12 @@ a{
 .seckill-nav{
     margin: -68px 0 22px;
 }
+.seckill-navfixed {
+    position: fixed;
+    top: 60px;
+}
 .seckill-nav ul{
+    width: 1226px;
     height: 68px;
     background: #414141;
 }
@@ -252,7 +257,11 @@ a{
     text-align: left;
     line-height: 20px; 
 }
+.seckill-goods .active {
+    display: block;
+}
 .seckill-goods ul{
+    display: none;
     margin-right: -13px;
 }
 .seckill-goods li {
@@ -262,6 +271,61 @@ a{
     background-color: #fff;
     margin-right: 13px;
     margin-bottom: 13px;
+}
+.seckill-goods .bg img{
+    height: 190px;
+}
+.seckill-goods .bg{
+    float: left;
+    width: 190px;
+    height: 190px;
+    /* border: 1px solid red; */
+}
+.seckill-goods .info{
+    margin-left: 210px;
+    width: 190px;
+    height: 190px;
+    /* border: 1px solid black; */
+    padding-top: 30px;
+}
+.seckill-goods .info .name {
+    font-size: 16px;
+    color: #333;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.seckill-goods .info .tips {
+    color: #b0b0b0;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 10px;
+}
+.seckill-goods .info .price {
+    color: #f1393a;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 14px;
+}
+.seckill-goods .info .price del {
+    color: #999;
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 10px;
+}
+.seckill-goods .info .btn {
+    display: block;
+    width: 118px;
+    height: 28px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 28px;
+    text-align: center;
+    background-color: #f1393a;
+    margin-top: 19px;
 }
 .seckill-notic {
     font-size: 12px;
