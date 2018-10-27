@@ -14,14 +14,46 @@ body ,ul ,li ,p{
     color: white;
     background-color: #b0b0b0;
 }
-.nav {
+.main {
     height: 420px;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
-.nav .nav-wanz li {
+.main .main-nav {
+    /* position: relative; */
+    height: 420px;
+    width: 100px;
+    /* border: 1px solid red; */
+    background-color: #000;
+    /* overflow: hidden; */
+}
+
+.main .main-nav .tips ul {
+    list-style-type: none;
+    
+}
+.main .main-nav .tips li {
     display: block;
-    height: 220px;
-    width: 100px
-    line-style: none;
+    float: left;
+    padding-left: 30px;
+    padding-top:60px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+.main  .list {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    display: block;
+    view width
+    height: 420px;
+    border: 1px solid red ;
+}
+.clearfix::before, .clearfix::after {
+    content:"";
+    display:table;
+}
+.clearfix::after {
+    clear:both;
 }
