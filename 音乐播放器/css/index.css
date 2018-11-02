@@ -1,0 +1,7 @@
+body, ul, li, a, p {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url(../img/beijing.jpg)
+}
