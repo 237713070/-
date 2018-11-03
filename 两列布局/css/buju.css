@@ -15,7 +15,7 @@ body ,ul ,li ,p{
     background-color: #000000;
 }
 .main {
-    height: 420px;
+    height: 408px;
     width: 100%;
     /* border: 1px solid black; */
 }
@@ -38,10 +38,30 @@ body ,ul ,li ,p{
     padding-top: 43px;
     padding-bottom: 43px;
     white-space: nowrap;
-    
+    cursor: pointer;
+}
+.main .main-nav ul .active {
+    background-color: #f1393a;
 }
 .main .list {
     height: 408px;
     overflow: hidden;
     border: 1px solid yellow;
+}
+.main .list .active {
+    display: block;
+}
+.main .list ul {
+    display: none;
+}
+.footer {
+    height: 60px;
+    background-color: yellowgreen;
+}
+.footer p {
+    display: block;
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
 }
