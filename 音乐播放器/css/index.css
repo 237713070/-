@@ -1,7 +1,89 @@
-body, ul, li, a, p {
+body, ul, li, a, p, h1, h2 {
     padding: 0;
     margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    width: 100%;
+    height: 100%;
 }
 body {
-    background-image: url(../img/beijing.jpg)
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/beijing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+/*wrapper*/
+.wrapper {
+    /* background: #ccc; */
+    width: 600px;
+    margin: 50px auto 0;/*上 左右 下*/
+}
+/*main*/
+.main {
+    width: 100%;
+    text-align: center;
+}
+.main img {
+    width: 200px;
+    height: 200px;
+    border: 50px solid #444;
+    border-radius: 50%;
+    margin: 20px;
+}
+/*tool*/
+.tool {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background: rgba(0,0, 0, 0.5);
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.tool>div {
+    top: 50%;
+    margin-top: -15px;
+}
+.btn {
+    position: absolute;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.tool i {
+    font-size: 30px;
+    color: #fff;
+    line-height: 30px;
+}
+.volume {
+    position: absolute;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+}
+.progress{
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    height: 30px;
+}
+.current-time, .all-time{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: 200;/*设置字体粗细，不带单位*/
+    line-height: 30px;/*垂直居中文字*/
+}
+.current-time{
+    float: left;
+}
+.all-time{
+    float: right;
 }
