@@ -65,6 +65,7 @@ body {
     right: 50px;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 .progress{
     position: absolute;
@@ -72,6 +73,7 @@ body {
     margin-left: -200px;
     width: 400px;
     height: 30px;
+    /* background: red; */
 }
 .current-time, .all-time{
     width: 80px;
@@ -86,4 +88,46 @@ body {
 }
 .all-time{
     float: right;
+}
+/*设置por-box的大小*/
+.pro-box{
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    display: inline-block;/*por-box是块元素独占一行会使得同样是块元素的all-time挤到下一行，设置display:inline-block,使all-time变为行级块元素解决*/
+    width: 240px;
+    height: 30px;
+}
+.pro-bg{
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.pro-active{
+    position: absolute;
+    top: 0;
+    left: 0;/*脱离文档流*/
+    width: 100px;
+    height: 2px;
+    background: #fff;
+}
+.radio-box{
+    position: absolute;
+    right: -9px;
+    top: -9px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.radio{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -4px;
+    margin-left: -4px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
 }
