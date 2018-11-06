@@ -107,13 +107,13 @@ body {
     position: absolute;
     top: 0;
     left: 0;/*脱离文档流*/
-    width: 100px;
+    width: 8px;
     height: 2px;
     background: #fff;
 }
 .radio-box{
     position: absolute;
-    right: -9px;
+    right: -6px;
     top: -9px;
     width: 20px;
     height: 20px;
