@@ -4,15 +4,16 @@ var oAudio = document.getElementById('audio'),
     oBtn = document.getElementsByClassName('btn')[0],
     oRadioBox = document.getElementsByClassName('radio-box')[0],
     oProActive = document.getElementsByClassName('pro-active')[0],
-    oIsPlay = oBtn.getElementsByClassName('iconfont')[0];
+    oIsPlay = oBtn.getElementsByClassName('iconfont')[0],
+    oProBox = document.getElementsByClassName('pro-box')[0];
 var timer,
     duration,
     bgWidth = 232;//提出作用域。
-
-oAudio.oncanplay = function () {
-    console.log(this)
+    
+    //ondurationchange资源是互联网资源使用这个
+window.onload = function () {
     oCurrentTime.innerHTML = conversion(0);
-    duration = this.duration
+    duration = oAudio.duration;
     oAllTime.innerHTML = conversion(duration);
 }
 //00:00
@@ -52,4 +53,24 @@ oAudio.onended = function () {
     oProActive.style.width = 8 + 'px';//宽度回到起始点。
     musicPlay()//再播放。
 }
-45：40
+oRadioBox.onmoudown = function () {
+    clearInterval(timer);
+    var c = oAudio.currentTime;
+    document.body.onmousemove = function (e) {
+        var newWidth = e.clientX - oProBox.getBoundingClientRect().left;
+        if(newWidth < 8) {
+            newWidth = 8;
+        }else if(newWidth > 240){
+            newWidth = 240;
+        }
+        oProActive.style.width = newWidth + 'px';
+        c = (newWidth-8)/bgWidth * duration;
+        oCurrentTime.innerHTML = conversion(c);
+    }
+    document.body.onmouseup = function () {
+        document.body.onmousemove = null;
+        document.body.onmouseup = null;
+        musicPlay();
+        oAudio.currentTime = c;
+    }
+}
