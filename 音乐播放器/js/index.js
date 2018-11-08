@@ -53,7 +53,7 @@ oAudio.onended = function () {
     oProActive.style.width = 8 + 'px';//宽度回到起始点。
     musicPlay()//再播放。
 }
-oRadioBox.onmoudown = function () {
+oRadioBox.onmousedown = function () {
     clearInterval(timer);
     var c = oAudio.currentTime;
     document.body.onmousemove = function (e) {
