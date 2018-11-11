@@ -5,6 +5,9 @@ var oAudio = document.getElementById('audio'),
     oRadioBox = document.getElementsByClassName('radio-box')[0],
     oProActive = document.getElementsByClassName('pro-active')[0],
     oIsPlay = oBtn.getElementsByClassName('iconfont')[0],
+    oVolume = document.getElementsByClassName('volume')[0],
+    oIsVolume = oVolume.getElementsByClassName('iconfont')[0],
+    oVolbox = document.getElementsByClassName('volbox')[0],
     oProBox = document.getElementsByClassName('pro-box')[0];
 var timer,
     duration,
@@ -73,4 +76,27 @@ oRadioBox.onmousedown = function () {
         musicPlay();
         oAudio.currentTime = c;
     }
+}
+
+oVolume.onclick = function() {
+    if(oIsVolume.className == 'iconfont icon-yinliangdaxiao'){
+        oIsVolume.className = 'iconfont icon-jingyin';
+        oAudio.volume = '0';
+    }
+    else if(oIsVolume.className == 'iconfont icon-jingyin'){
+        oIsVolume.className = 'iconfont icon-yinliangdaxiao';
+        oAudio.volume = '1';
+    }
+}
+oVolume.onmousemove = function(){
+    if(oVolume.onmouseover){
+        oVolbox.style = 'display: none;';
+    }
+    // else if(oVolume.onmouseout) {
+    //     oVolbox.style = 'display: none;';
+    // }
+    else{
+        oVolbox.style = ' ';
+    }
+//     // oVolbox.style.clear
 }
