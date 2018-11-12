@@ -10,6 +10,7 @@ var oAudio = document.getElementById('audio'),
     oVolbox = document.getElementsByClassName('volbox')[0],
     oProBox = document.getElementsByClassName('pro-box')[0];
 var timer,
+    _timer,
     duration,
     bgWidth = 232;//提出作用域。
     
@@ -88,15 +89,15 @@ oVolume.onclick = function() {
         oAudio.volume = '1';
     }
 }
-oVolume.onmousemove = function(){
-    if(oVolume.onmouseover){
-        oVolbox.style = 'display: none;';
+
+oVolume.onmouseover = oVolbox.onmouseover = function() {
+    oVolbox.style.display = "block";
+}
+oVolume.onmouseout = oVolbox.onmouseout = function() {
+    if(_timer){
+        clearTimeout(_timer);
     }
-    // else if(oVolume.onmouseout) {
-    //     oVolbox.style = 'display: none;';
-    // }
-    else{
-        oVolbox.style = ' ';
-    }
-//     // oVolbox.style.clear
+    _timer = setTimeout(function() {
+        oVolbox.style.display = "none";
+    },200);
 }
