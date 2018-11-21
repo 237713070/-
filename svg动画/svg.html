@@ -27,11 +27,69 @@
 </head>
 <body>
     <div class="wrapper">
-        <svg id="style1" xmlns="http://www.w3.org/2000/svg" version="1.1">
-            
-            <rect class="rect1"
+        <div class="item item1">
+            <svg id="style1" xmlns="http://www.w3.org/2000/svg" version="1.1"> <!--svg写法-->
+                <!--分别画出3个矩形，注意辨别x，y轴--><!--画矩形颜色渐变-->
+                <rect class="rect1" x="0" y="0" width="4" height="20" fill="#ff6700">
+                    <animate attributeName="opacity" from="1" to="0.3" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+                <rect class="rect2" x="7" y="0" width="4" height="20" fill="#ff6700">
+                    <animate attributeName="opacity" from="1" to="0.3" begin="0.2s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+                <rect class="rect3" x="14" y="0" width="4" height="20" fill="#ff6700">
+                    <animate attributeName="opacity" from="1" to="0.3" begin="0.4s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+            </svg>
+        </div>
+        <div class="item item2">
+            <svg id="style1" xmlns="http://www.w3.org/2000/svg" version="1.1"> <!--svg写法-->
+                <!--分别画出3个矩形，注意辨别x，y轴--><!--画矩形长度渐变，注意收回是从起点-终点-起点一个轮回-->
+                <rect class="rect1" x="0" y="0" width="4" height="20" fill="#ff6700">
+                    <animate attributeName="height" values="10;20;10" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+                <rect class="rect2" x="7" y="0" width="4" height="20" fill="#ff6700">
+                    <animate attributeName="height" values="10;20;10" begin="0.2s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+                <rect class="rect3" x="14" y="0" width="4" height="20" fill="#ff6700">
+                    <animate attributeName="height" values="10;20;10" begin="0.4s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+            </svg>
+        </div>
+        <div class="item item3">
+            <svg id="style1" xmlns="http://www.w3.org/2000/svg" version="1.1"> <!--svg写法-->
+                <!--分别画出3个矩形，注意辨别x，y轴--><!--画矩形y轴变动，注意y轴变化-->
+                <rect class="rect1" x="0" y="0" width="4" height="10" fill="#ff6700">
+                    <animate attributeName="y" values="0;10;0" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+                <rect class="rect2" x="7" y="0" width="4" height="10" fill="#ff6700">
+                    <animate attributeName="y" values="0;10;0" begin="0.2s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+                <rect class="rect3" x="14" y="0" width="4" height="10" fill="#ff6700">
+                    <animate attributeName="y" values="0;10;0" begin="0.4s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+            </svg>
+        </div>
+        <div class="item item4">
+            <svg id="style1" xmlns="http://www.w3.org/2000/svg" version="1.1"> <!--svg写法-->
+                <!--分别画出3个矩形，注意辨别x，y轴--><!--动画效果一个一个用<animate>去实现，实现叠加效果-->
+                <rect class="rect1" x="0" y="10" width="4" height="8" fill="#ff6700">
+                    <animate attributeName="opacity" from="0.3" to="1" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
+                    <animate attributeName="y" values="7;0;7" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
+                    <animate attributeName="height" values="6;20;6" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+                <rect class="rect2" x="10" y="10" width="4" height="8" fill="#ff6700">
+                    <animate attributeName="opacity" from="0.3" to="1" begin="0.2s" dur="0.6s" repeatCount="indefinite"></animate>
+                    <animate attributeName="y" values="7;0;7" begin="0.2s" dur="0.6s" repeatCount="indefinite"></animate>
+                    <animate attributeName="height" values="6;20;6" begin="0.2s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+                <rect class="rect3" x="20" y="10" width="4" height="8" fill="#ff6700">
+                    <animate attributeName="opacity" from="0.3" to="1" begin="0.4s" dur="0.6s" repeatCount="indefinite"></animate>
+                    <animate attributeName="y" values="7;0;7" begin="0.4s" dur="0.6s" repeatCount="indefinite"></animate>
+                    <animate attributeName="height" values="6;20;6" begin="0.4s" dur="0.6s" repeatCount="indefinite"></animate>
+                </rect>
+            </svg>
+        </div>
         
-        </svg>
     </div>
 </body>
 </html>
