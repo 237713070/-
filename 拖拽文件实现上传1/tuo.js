@@ -17,6 +17,7 @@ content.addEventListener('drop', function (e) {
     // console.log(file.size);
     readBlob(reader, 0, step);
     bindEvent();
+    console.log("hhh");
 });
 /*读取文件*/
 function readBlob(reader, start, step) {
@@ -30,10 +31,11 @@ function readBlob(reader, start, step) {
     reader.readAsText(blob);
 }
 function bindEvent(){
-    readBlob.onprogress = function(e) {
+    reader.onprogress = function(e) {
         onProgress(e.loaded);
+        console.log("kkk");
     }
-    reader.onload = function () {
+    reader.onload = function (e) {
         
     }
 }
@@ -42,4 +44,5 @@ function onProgress(num) {
     var per =loaded/total;
     val.style.width = per * 250 + 'px';/*计算滚动条变化*/
     text.innerHTML = Math.round(per * 100) + '%';/*计算百分比*/
+    console.log("kkk");
 }
