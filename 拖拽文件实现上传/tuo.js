@@ -1,11 +1,7 @@
 var content = document.getElementsByClassName("content")[0];
 var val = document.getElementsByClassName("val")[0];
 var text = document.getElementsByClassName("text")[0];
-var file,
-    step = 1024*1024,
-    total,
-    reader = new FileReader(),
-    loaded = 0;/*已经上传了多少*/
+
 
 content.addEventListener('dragover', function (e) {
     e.preventDefault();//取消dragover默认事件//
@@ -13,33 +9,23 @@ content.addEventListener('dragover', function (e) {
 content.addEventListener('drop', function (e) {
     e.preventDefault();
     file = e.dataTransfer.files[0];/*获取文件*/
-    total = file.size;
+    // total = file.size;
     // console.log(file.size);
-    readBlob(reader, 0, step);
-    bindEvent();
+    var loader = new FileLoader(file,events);//调用组件
+    // readBlob(reader, 0, step);//读取文件
+    // bindEvent();//监听文件
 });
-/*读取文件*/
-function readBlob(reader, start, step) {
-    /*读取文件数据*/
-    /*分析浏览器是否支持分段上传*/
-    if(file.slice) {
-        var blob = file.slice(start, start+step);
-    }else {
-        var blob =file;
-    }
-    reader.readAsText(blob);
-}
-function bindEvent(){
-    readBlob.onprogress = function(e) {
-        onProgress(e.loaded);
-    }
-    reader.onload = function () {
-        
+
+var events = {
+    progressIng: function (per) {
+        val.style.width = per * 250 + 'px';/*计算滚动条变化*/
+        text.innerHTML = Math.round(per * 100) + '%';/*计算百分比*/
+    },
+    stepLoad: function (loaded) {
+        console.log('上传' + loaded + '部分');
+    },
+    finish: function(){
+        console.log('上传完毕');
     }
 }
-function onProgress(num) {
-    loaded += num;
-    var per =loaded/total;
-    val.style.width = per * 250 + 'px';/*计算滚动条变化*/
-    text.innerHTML = Math.round(per * 100) + '%';/*计算百分比*/
-}
+
