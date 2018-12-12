@@ -23,7 +23,7 @@ a{
     /* border: 1px solid #eeeeee; */
     background: #eeeeee;
 }
-.num-pre{
+.text{
     position: absolute;
     left: 75px;
     margin-top: 2px; 
@@ -45,5 +45,5 @@ a{
     background: #eeeeee;
 }
 .min{
-    color: #eeeeee;
+    color: #e0e0e0;
 }
