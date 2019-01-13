@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body, ul, li, a {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .wrapper{
+            width: 600px;
+            margin: 0 auto;
+            background: #eeeeee;
+            font-size: 0;
+        }
+        .wrapper input{
+            display: none;
+        }
+        .title ul li {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            font-size:20px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .title ul li label {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+        }
+        .main{
+            background: #f7f7f7;
+        }
+        .main ul {
+            display: none;
+            margin: 0 20px;
+        }
+        .main ul li {
+            padding: 10px 0;
+        }
+        .main ul li a {
+            font-size: 14px;
+            color: black;
+        }
+        #headline:checked ~ .main .headline-news,
+        #entertainment:checked ~ .main .entertainment-news,
+        #economic:checked ~ .main .economic-news{
+            display: block;
+        }
+        #headline:checked ~ .title .headline,
+        #entertainment:checked ~ .title .entertainment,
+        #economic:checked ~ .title .economic{
+            background: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="radio" name="tab" id="headline" checked>
+        <input type="radio" name="tab" id="entertainment">
+        <input type="radio" name="tab" id="economic">
+        <nav class="title">
+            <ul>
+                <li class="headline">
+                    <label for="headline">头条</label>
+                </li>
+                <li class="entertainment">
+                    <label for="entertainment">娱乐</label>
+                </li>
+                <li class="economic">
+                    <label for="economic">财经</label>
+                </li>
+            </ul>
+        </nav>
+        <div class="main">
+            <ul class="headline-news">
+                <li><a href="javascript:;">新党“很震撼连线”：台湾表态支持统一的民众增多了 .</a></li>
+                <li><a href="javascript:;">副厅长自杀，1天前原同事落马，2天前下属被查 .</a></li>
+                <li><a href="javascript:;">内蒙古公安厅副厅长李志斌自杀 近日内蒙古政法系统多人落马 .</a></li>
+                <li><a href="javascript:;">经常吃的西红柿，到底应该是蔬菜还是水果呢？看完恍然大悟</a></li>
+            </ul>
+            <ul class="entertainment-news">
+                <li><a href="javascript:;">她21岁上春晚走红，一个决定“消失”近19年，今41岁发福认不出</a></li>
+                <li><a href="javascript:;">如此近距离接触蔡徐坤，真人比电视上的还要帅！</a></li>
+                <li><a href="javascript:;">为什么那么多人喜欢刘德华？</a></li>
+                <li><a href="javascript:;">闺蜜握到了九郎凉凉的小手，便宜都让她占了！我一点都不羡慕！</a></li>
+            </ul>
+            <ul class="economic-news">
+                <li><a href="javascript:;">董明珠演讲到一半，一句没用格力空调的赶紧把空调换掉，全场笑了</a></li>
+                <li><a href="javascript:;">乐视债主赴美追债起诉 贾跃亭15亿美元资产被冻结</a></li>
+                <li><a href="javascript:;">男子在牛肉上发现商机，靠原本耕地用的黄牛，做到年销售额1亿元</a></li>
+                <li><a href="javascript:;">外汇局局长潘功胜：健全监管框架 防范跨境资金流动风险</a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

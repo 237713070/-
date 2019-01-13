@@ -1,0 +1,40 @@
+body, ul, li, a{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: 0;
+}
+.wrapper{
+    position: relative;
+    width: 590px;
+    height: 470px;
+    margin: 100px auto;
+    border: 5px solid black;
+}
+.img-box{
+    width: 3540px;
+    height: 470px;
+}
+.img-box ul li {
+    display: inline-block;
+}
+.btn{
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+}
+.btn a{
+    width: 15px;
+    height: 24px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 16px;
+}
+.btn .left{
+    left: 0;
+}
+.btn .right{
+    right: 0;
+}
