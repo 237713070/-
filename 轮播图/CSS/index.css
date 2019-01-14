@@ -11,10 +11,14 @@ body, ul, li, a{
     height: 470px;
     margin: 100px auto;
     border: 5px solid black;
+    overflow: hidden;
 }
 .img-box{
+    position: absolute;
+    left: 0;
     width: 3540px;
     height: 470px;
+    
 }
 .img-box ul li {
     display: inline-block;
@@ -39,4 +43,26 @@ body, ul, li, a{
 }
 .btn .nextBtn{
     right: 0;
+}
+.rio-box{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+.rio-box ul{
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 7px;
+}
+.rio-box ul li{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    background: #fff;
+    border-radius: 50%;
+}
+.rio-box ul .active{
+    background: #ff9700;
 }
