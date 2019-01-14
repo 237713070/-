@@ -22,9 +22,11 @@ body, ul, li, a{
 .btn{
     position: absolute;
     top: 50%;
-    margin-top: -10px;
+    width: 100%;
 }
 .btn a{
+    position: absolute;
+    margin-top: -20px;
     width: 15px;
     height: 24px;
     padding: 10px;
@@ -32,9 +34,9 @@ body, ul, li, a{
     color: #fff;
     font-size: 16px;
 }
-.btn .left{
+.btn .prevBtn{
     left: 0;
 }
-.btn .right{
+.btn .nextBtn{
     right: 0;
 }
