@@ -2,6 +2,9 @@ body ,ul ,li ,p{
     margin: 0;
     padding: 0; 
 }
+body {
+    min-width: 600px;
+}
 .header {
     height: 60px;
 }

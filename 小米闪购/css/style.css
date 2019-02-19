@@ -5,6 +5,7 @@ body ,ul ,li{
 }
 body{
     height:2500px;
+    min-width: 800px;
     font:14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
 /* 取消ul的小圆点 */
@@ -206,6 +207,7 @@ a{
 .seckill-head{
     margin-top: 19px;
     height: 170px;
+    min-width: 1000px;
     background: url(../img/seckill-head.jpg) no-repeat 50% 0;
 }
 .seckill-nav{
