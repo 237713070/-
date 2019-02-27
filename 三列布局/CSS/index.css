@@ -8,6 +8,7 @@ body {
 }
 .nav{
     height: 100px;
+    margin: 10px;
 }
 .nav ul{
     display: flex;
