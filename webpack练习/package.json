@@ -1,0 +1,18 @@
+{
+  "name": "webpack-test",
+  "version": "1.0.0",
+  "description": "this test",
+  "main": "index.js",
+  "scripts": {
+    "webpak": "webpack",
+    "prod":"npm run webpack -- --mode production --watch",
+    "dev":"npm run webpack -- --mode develoment"
+  },
+  "keywords": [
+    "webpack",
+    "es6",
+    "javascript"
+  ],
+  "author": "jiahong",
+  "license": "ISC"
+}
