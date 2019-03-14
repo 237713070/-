@@ -1,21 +1,21 @@
-body, ul, li, a, p{
+body, ul, li, a{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
-a, p{
-    color: #fff;
+a{
+    color: #ffffff;
 }
 .gn-globalnav{
     height: 44px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); 
 }
 .gn-content{
     max-width: 980px;
     margin: 0 auto;
 }
-.gn-header{
+.gn-header {
     display: none;
 }
 .gn-list, .gn-header{
@@ -33,14 +33,14 @@ a, p{
     font-weight: 200;
 }
 .gn-logo a{
-    background-image: url('../img/logo.png');
+    background-image: url('../IMG/logo.png');
     width: 40px;
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
 }
 .gn-header{
-    display: none;
+    display:none;
 }
 .gn-header .gn-more{
     font-size: 30px;
@@ -48,8 +48,7 @@ a, p{
 .gn-list.gn-list-active{
     display: flex;
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and ( max-width: 600px ){
     .gn-list{
         display: none;
         position: absolute;
@@ -62,16 +61,16 @@ a, p{
     .gn-list .gn-logo{
         display: none;
     }
+    /*设置top线条*/
     .gn-list li{
         width: 80%;
-        margin: 0 auto;
+        margin:0 auto;
         border-top: 1px solid #555;
     }
     .gn-list li:first-child{
-        border-top: none;
+        border-top:none;
     }
     .gn-header{
         display: flex;
     }
-    
 }
