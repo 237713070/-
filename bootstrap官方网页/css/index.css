@@ -1,0 +1,196 @@
+.masthead {
+    background: linear-gradient(45deg,#020031 0,#6d3353 100%);
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    padding: 60px 0 80px;
+    margin-bottom: 0;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    position: relative;
+}
+.masthead .container {
+    position: relative;
+    z-index: 2;
+}
+.masthead .container ul li{
+    list-style-type: none;
+}
+.masthead::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('../img/bs-docs-masthead-pattern.png') repeat center center;
+    opacity: 0.4;
+}
+.masthead h1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+}
+.masthead h2 {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.25;
+}
+.masthead a {
+    transition: all 0.2s ease-in-out;
+}
+.masthead .masthead-bottom-link {
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1.25;
+    margin-top: 30px;
+}
+.masthead .masthead-bottom-link .btn-shadow {
+    padding: 13px 35px 17px;
+    box-shadow: inset 0 -4px 0 #2a6496;
+    border: 0;
+}
+.masthead .masthead-link a{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    margin-left: -40px;
+}
+.masthead .masthead-link a:hover {
+    color:#fff;
+}
+@media screen and (min-width: 768px){
+    .masthead {
+        padding: 90px 0 110px;
+    }
+    .masthead h1 {
+        font-size: 90px;
+    }
+    .masthead h2 {
+        font-size: 24px;
+    }
+}
+
+.advisory{
+    padding: 15px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ddd;
+}
+.advisory .iconfont {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 3px;
+    text-decoration: none;
+}
+.advisory-buttons {
+    list-style: none;
+}
+.advisory-buttons li {
+    display: inline-block;
+    line-height: 1;
+    color: #555;
+}
+.advisory-buttons li a {
+    color: #555;
+}
+.advisory-buttons .advisory-weibo a:hover{
+    color: #d9534f;
+}
+.advisory-buttons .advisory-weibo::before {
+    content: '|';
+    padding: 0 10px;
+    color: #ccc;
+}
+.projects-header {
+    width: 60%;
+    text-align: center;
+    margin: 60px 0 10px;
+    font-weight: 200;
+    margin-bottom: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.projects-header h1 {
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+@media screen and (min-width: 768px){
+    .projects-header h1 {
+        font-size: 42px;
+    }
+}
+.projects a {
+    text-decoration: none;
+}
+.projects .thumbnail {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 310px;
+    margin-bottom: 30px;
+    border-radius: 0;
+    height: 352px;
+}
+.projects .thumbnail .caption {
+    height: 200px;
+    overflow-y: hidden;
+    color: #555;
+}
+
+.thumbnail a img {
+    width: 300px;
+    height: 150px;
+}
+.footer {
+    color: #777;
+    padding: 30px 0;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 70px;
+}
+
+.footer a{
+    color: #777;
+}
+
+.footer-top .about>div h4 {
+    color: #563d7c;
+    font-size: 16px;
+}
+
+.footer-bottom {
+    font-size: 13px;
+}
+
+.footer-bottom ul>li {
+    padding: 0;
+}
+
+.footer-bottom ul>li+li:before {
+    padding: 0 10px;
+    color: #ccc;
+    content: '|'
+}
+
+@media screen and (min-width: 768px) {
+    .poster h1 {
+        font-size: 90px;
+    }
+    .poster h2 {
+        font-size: 24px;
+    }
+    .projects-header h2{
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .poster h1 {
+        font-size: 100px;
+    }
+    .poster h2 {
+        font-size: 30px;
+    }
+}
